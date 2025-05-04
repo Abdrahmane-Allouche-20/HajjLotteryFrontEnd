@@ -70,10 +70,17 @@ export const AppContextProvider = ({ children }) => {
   const addRegistor = async (data) => {
     setLoading(true);
     const token = localStorage.getItem('token');
+   console.log(token)
+    if (!token || token.split('.').length !== 3) {
+      setError('Invalid or missing authentication token');
+      setLoading(false);
+      return;
+    }
+  
     try {
       const response = await axios.post('/hajj', data, {
         headers: {
-          Authorization: 'Bearer ' + token,
+          Authorization: `Bearer ${token}`,
         },
       });
       setError('');
@@ -81,12 +88,13 @@ export const AppContextProvider = ({ children }) => {
         navigate('/About');
       }
     } catch (error) {
+      console.log(error);
       setError(error.response?.data?.message || 'Failed to register');
     } finally {
       setLoading(false);
     }
   };
-
+  
   const getAllRegistors = async () => {
     setLoading(true);
     try {

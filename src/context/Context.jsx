@@ -70,7 +70,7 @@ export const AppContextProvider = ({ children }) => {
   const addRegistor = async (data) => {
     setLoading(true);
     const token = localStorage.getItem('token');
-   console.log(token)
+  
     if (!token || token.split('.').length !== 3) {
       setError('Invalid or missing authentication token');
       setLoading(false);

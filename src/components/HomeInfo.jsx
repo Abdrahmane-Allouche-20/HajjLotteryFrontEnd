@@ -51,7 +51,7 @@ const HomeInfo = ({ currentStage }) => {
       Answer the call of Hajj 🕋
       </p>
 
-      <Link to='/hedj_registration' className='neo-brutalism-white py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-fit w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3'>
+      <Link to='/hejj_registration' className='neo-brutalism-white py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-fit w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3'>
       register now
         <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
       </Link>

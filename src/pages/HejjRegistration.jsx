@@ -2,7 +2,7 @@
 import React, { useState,useContext } from 'react'
 import { AppContext } from '../context/Context'
 function HejjRegistration() {
-  const {addRegistor,loading,error}=useContext(AppContext)
+  const {addRegistor,loading,error,user}=useContext(AppContext)
   const [firstname, setFirstName] = useState('')
   const [lastname, setLastName] = useState('')
   const [phone, setPhone] = useState('')
@@ -52,7 +52,17 @@ function HejjRegistration() {
               onChange={(e) => setLastName(e.target.value)}
             />
           </label>
-
+          <label className="font-semibold">
+            email
+            <input
+              type="text"
+              name="lastName"
+              className="bg-green-100/50 outline-green-600 cursor-not-allowed  text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+              placeholder="Nationality"
+              disabled
+              value={user?.email}
+            />
+          </label>
           <label className="font-semibold">
             Phone Number
             <input
@@ -96,7 +106,7 @@ function HejjRegistration() {
               type="text"
               name="lastName"
               className="bg-green-100 outline-green-600  text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
-              placeholder="Last Name"
+              placeholder="Nationality"
               required
               value={nationality}
               onChange={(e) => setNationality(e.target.value)}

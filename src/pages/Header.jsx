@@ -16,18 +16,6 @@ function Header() {
         <>
           <NavLink
             onClick={() => setIsOpen(false)}
-            to="/About"
-
-            className={({ isActive }) =>
-              `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
-    transform duration-300  flex items-center gap-3 `
-            }
-          >
-
-            About
-          </NavLink>
-          <NavLink
-            onClick={() => setIsOpen(false)}
             to='/Contact'
             className={({ isActive }) =>
               `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"}
@@ -74,6 +62,18 @@ function Header() {
         </>
         :
         <>
+          <NavLink
+            onClick={() => setIsOpen(false)}
+            to="/About"
+
+            className={({ isActive }) =>
+              `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+    transform duration-300  flex items-center gap-3 `
+            }
+          >
+
+            About
+          </NavLink>
           <NavLink
             onClick={() => setIsOpen(false)}
             to="/Login"

@@ -1,10 +1,10 @@
 import React, { useState,useEffect, useContext} from 'react'
 import { NavLink } from 'react-router-dom'
-import { moon, menu, x } from '../assets/icons'
+import { moon } from '../assets/icons'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AppContext } from '../context/Context'
-
-
+import { Menu ,X} from 'lucide-react';
+<Menu />
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const {user,logout}=useContext(AppContext)
@@ -130,9 +130,9 @@ function Header() {
         </nav>
 
 
-        <div className='md:hidden mt-1'>
+        <div className='md:hidden mt-1 '>
           <button onClick={() => setIsOpen(prev => !prev)}>
-            {isOpen ? <img src={x} alt='close button' height={28} width={28} /> : <img src={menu} alt='close button' height={28} width={28} />}
+            {isOpen ?   <X  className='text-white'/>:<Menu className='text-white'/>}
           </button>
         </div>
       </div>

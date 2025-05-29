@@ -84,17 +84,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:orange;
+  background-color:white;
   border-radius: 2px;
 }
 
 /* Optional: on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #15803d; /* darker green */
+  background-color: #e83803; /* darker green */
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #16a34a transparent;
+  scrollbar-color: #ff6131 transparent;
 }

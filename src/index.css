@@ -48,8 +48,8 @@
 .neo-brutalism-blue {
   position: relative;
   border-radius: 10px;
-  box-shadow: 1vmin 1vmin 0.6vmin rgba(13, 36, 85, 0.543);
-  background: #2670c5cd;
+  box-shadow: 1vmin 1vmin 0.6vmin rgba(15, 15, 14, 0.543);
+  background: #ffb97c;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
@@ -64,7 +64,7 @@
 
 .glass {
 
-  background: rgba(255, 255, 255, 0.635);
+  background: rgb(255, 122, 65);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(5, 5, 5, 0.1);
   backdrop-filter: blur(30px);
@@ -84,7 +84,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #16a34a; /* green-600 */
+  background-color:orange;
   border-radius: 2px;
 }
 

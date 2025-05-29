@@ -5,7 +5,7 @@ import { AppContext } from '../context/Context';
 
 const Dashboard = () => {
   const { countUsers,countRegistores,getAllRegistors,getAllUsers } = useContext(AppContext);
-  console.log(countRegistores)
+ 
     useEffect(() => {
           const fetchData = async () => {
             await getAllUsers();

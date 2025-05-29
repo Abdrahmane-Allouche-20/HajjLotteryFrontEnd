@@ -3,7 +3,7 @@ import { AppContext } from '../context/Context';
 import { NavLink } from 'react-router-dom'
 function Registors() {
   const { registors, getAllRegistors,deleteRegistor } = useContext(AppContext);
-console.log(registors)
+
   useEffect(() => {
     const fetchData = async () => {
       await getAllRegistors();

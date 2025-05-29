@@ -9,7 +9,7 @@ const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
 
   const handleChange = ({ target: { name, value } }) => {
-  console.log(name)
+
  
     setForm({ ...form, [name]: value });
   };
@@ -70,8 +70,8 @@ const Contact = () => {
   return (
     <section className="relative  flex lg:flex-row flex-col max-w-5xl mx-auto sm:p-16 pb-6 !pt-[126px] px-8 min-h-[calc(100vh-80px)]">
       {alert.show && <Alert {...alert} />}
-      <div className="flex-1 min-w-[50%] flex p-6 rounded-xl bg-white/20 backdrop-blur-md border border-white/20  shadow-lg flex-col">
-        <h1 className="sm:text-5xl text-3xl  font-semibold text-white sm:leading-snug font-poppins">
+      <div className="flex-1 min-w-[50%] flex p-6 rounded-xl bg-orange-600/20 backdrop-blur-md shadow-lg flex-col">
+        <h1 className="sm:text-5xl text-3xl  font-semibold text- sm:leading-snug font-poppins">
           Get in Touch
         </h1>
 
@@ -80,12 +80,12 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="  w-full flex flex-col gap-7 mt-7"
         >
-          <label className="font-semibold  text-white">
+          <label className="font-semibold  text-">
             Name
             <input
               type="text"
               name="name"
-              className="bg-green-100 outline-green-600 border  text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
+              className="bg-[#ffefb7] outline-orange-400   text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
               placeholder="Name"
               required
               value={form.name}
@@ -94,12 +94,12 @@ const Contact = () => {
             />
           </label>
 
-          <label className="font-semibold  text-white">
+          <label className="font-semibold  text-">
             Email
             <input
               type="email"
               name="email"
-              className="bg-green-100 border outline-green-600 border-black text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
+              className="bg-[#ffefb7]  outline-orange-400  text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
               placeholder="anything@gmail.com"
               required
               value={form.email}
@@ -108,12 +108,12 @@ const Contact = () => {
             />
           </label>
 
-          <label className="font-semibold text-white">
+          <label className="font-semibold text-">
             Your Message
             <textarea
               name="message"
               rows="4"
-              className="block p-2.5 w-full outline-green-600 text-sm text-gray-900 bg-green-100 rounded-lg border border-black-600  mt-2.5 font-normal "
+              className="block p-2.5 w-full outline-orange-400 text-sm text-gray-900 bg-[#ffefb7] rounded-lg  mt-2.5 font-normal "
               placeholder="Write your thoughts here..."
               value={form.message}
               onChange={handleChange}
@@ -124,7 +124,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="text-white bg-gradient-to-br from-green-400 to-green-800   font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="text- bg-gradient-to-br from-orange-400 to-orange-600 text-white cursor-pointer    font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {loading ? "Sending..." : "Submit"}
           </button>

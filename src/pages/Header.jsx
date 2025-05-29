@@ -1,24 +1,57 @@
-import React, { useState,useEffect, useContext} from 'react'
+import  { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { moon } from '../assets/icons'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AppContext } from '../context/Context'
-import { Menu ,X} from 'lucide-react';
-<Menu />
-function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const {user,logout}=useContext(AppContext)
+import { Menu, X } from 'lucide-react';
 
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const { user } = useContext(AppContext)
+
+  
+  const userProfile = (
+    
+      <NavLink
+        className="flex items-center gap-2 cursor-pointer"
+        to='/profile'
+      >
+        <img
+          src={
+            user?.profileImage?.url
+          }
+          alt="Profile"
+          className="w-9 h-9 rounded-full object-cover border-2 border-white"
+        />
+        
+        
+      </NavLink>
+     
+   
+  );
 
   const navLinks = (
     <>
-      {user  ?
+      {user ?
         <>
+        <NavLink
+            onClick={() => setIsOpen(false)}
+            to="/About"
+
+            className={({ isActive }) =>
+              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+    transform duration-300  flex items-center gap-3 `
+            }
+          >
+
+            About
+          </NavLink>
           <NavLink
             onClick={() => setIsOpen(false)}
             to='/Contact'
             className={({ isActive }) =>
-              `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"}
+              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"}
   transform duration-300  flex items-center gap-3`
             }>
 
@@ -29,13 +62,14 @@ function Header() {
             to="/hejj_registration"
 
             className={({ isActive }) =>
-              `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
   transform duration-300  flex items-center gap-3 `
             }
           >
 
             Hajj Registration
           </NavLink>
+          
 
           {user.isAdmine &&
             <NavLink
@@ -43,22 +77,15 @@ function Header() {
               to="/Admin"
 
               className={({ isActive }) =>
-                `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+                `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
         transform duration-300  flex items-center gap-3 `
               }
             >
 
               Admin
             </NavLink>}
-            <button
-  onClick={() => {
-    setIsOpen(false);
-    logout();
-  }}
-  className="text-white bg-green-600 px-2 py-1 rounded-xl  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1 transform duration-300 flex items-center gap-3"
->
-  LogOut
-</button>
+          {/* Replace logout button with user profile dropdown */}
+          <div className="ml-2">{userProfile}</div>
         </>
         :
         <>
@@ -67,7 +94,7 @@ function Header() {
             to="/About"
 
             className={({ isActive }) =>
-              `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
     transform duration-300  flex items-center gap-3 `
             }
           >
@@ -79,7 +106,7 @@ function Header() {
             to="/Login"
 
             className={({ isActive }) =>
-              `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
         transform duration-300  flex items-center gap-3 `
             }
           >
@@ -91,7 +118,7 @@ function Header() {
             to="/Register"
 
             className={({ isActive }) =>
-              `${isActive ? "text-green-500  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
       transform duration-300  flex items-center gap-3 `
             }
           >
@@ -132,7 +159,7 @@ function Header() {
 
         <div className='md:hidden mt-1 '>
           <button onClick={() => setIsOpen(prev => !prev)}>
-            {isOpen ?   <X  className='text-white'/>:<Menu className='text-white'/>}
+            {isOpen ? <X className='text-white' /> : <Menu className='text-white' />}
           </button>
         </div>
       </div>

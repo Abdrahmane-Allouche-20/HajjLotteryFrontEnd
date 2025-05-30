@@ -13,21 +13,21 @@ function Registors() {
 
   return (
     <section className="relative flex flex-col lg:flex-row max-w-6xl mx-auto sm:p-16 pb-6 !pt-[120px] px-4 min-h-[calc(100vh-80px)]">
-      <div className="flex flex-col lg:flex-row gap-4 bg-orange-600/20 backdrop-blur-lg  rounded-xl p-4 sm:p-6 w-full">
+      <div className="flex flex-col lg:flex-row gap-4 bg-purple-600/20 backdrop-blur-lg  rounded-xl p-4 sm:p-6 w-full">
         
         {/* Sidebar */}
-        <div className="w-full lg:w-[20%] border-b lg:border-b-0 lg:border-r-2 border-black pb-4 lg:pb-0">
-          <h1 className="text-black font-black text-base sm:text-xl border-b-2 border-black pb-1 w-fit">Dashboard</h1>
+        <div className="w-full lg:w-[20%] border-b lg:border-b-0 lg:border-r-2 border-[#25204b] pb-4 lg:pb-0">
+          <h1 className="text-[#25204b] font-black text-base sm:text-xl border-b-2 border-[#25204b] pb-1 w-fit">Dashboard</h1>
           <ul className="mt-6 text-white text-sm sm:text-base flex justify-center sm:justify-start sm:flex-col gap-4">
     <li className="font-black"><NavLink to={'/Admin'}>States</NavLink></li>
     <li className="font-black"><NavLink to={'/Admin/users'}>Users</NavLink></li>
-    <li className="text-black font-black"><NavLink to={'/Admin/registers'}>Registers</NavLink></li>
+    <li className="font-black text-[#25204b]"><NavLink to={'/Admin/registers'}>Registers</NavLink></li>
   </ul>
         </div>
 
         {/* Main Content */}
         <div className="flex-1 overflow-x-auto">
-          <h1 className="text-black font-black mb-4 text-base sm:text-xl text-left ">Registors</h1>
+          <h1 className="text-[#25204b] font-black mb-4 text-base sm:text-xl text-left ">Registors</h1>
 
           <div className="min-w-[600px] sm:min-w-full">
             <table className="w-full rounded-lg overflow-hidden bg-white/40 backdrop-blur-lg">
@@ -40,10 +40,10 @@ function Registors() {
                   <th className=" p-2 text-center text-xs sm:text-lg font-bold">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-orange-900">
+              <tbody className="divide-y divide-purple-900">
                 {registors && registors.length > 0 ? (
                   registors.map((person, index) => (
-                    <tr key={index} className="hover:bg-orange-200/30">
+                    <tr key={index} className="hover:bg-purple-200/30">
                       <td className="font-semibold text-xs sm:text-base p-2 tracking-wide">{person.firstname} {person.lastname}</td>
                       <td className="font-semibold text-xs sm:text-base p-2 tracking-wide">{person.passport}</td>
                       <td className="font-semibold text-xs sm:text-base p-2 tracking-wide">{new Date(person.birthdate).toLocaleDateString()}</td>
@@ -55,7 +55,7 @@ function Registors() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="5" className="text-center py-6 text-black font-semibold">No registrants found.</td>
+                    <td colSpan="5" className="text-center py-6 text-[#25204b] font-semibold">No registrants found.</td>
                   </tr>
                 )}
               </tbody>

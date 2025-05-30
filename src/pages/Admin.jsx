@@ -28,13 +28,13 @@ const Dashboard = () => {
 
   return (
  <section className="relative flex lg:flex-row flex-col max-w-6xl mx-auto sm:p-16 pb-6 !pt-[120px] px-8 min-h-[calc(100vh-80px)]">
-      <div className="flex flex-col lg:flex-row gap-4 bg-orange-600/20 backdrop-blur-lg  rounded-xl p-4 sm:p-6 w-full">
+      <div className="flex flex-col lg:flex-row gap-4 bg-purple-600/20 backdrop-blur-lg  rounded-xl p-4 sm:p-6 w-full">
 
           {/* Sidebar */}
-          <div className="w-full lg:w-[20%] border-b lg:border-b-0 lg:border-r-2 border-black pb-4 lg:pb-0">
-              <h1 className="font-black text-base sm:text-xl border-b-2 border-black pb-1 w-fit">Dashboard</h1>
+          <div className="w-full lg:w-[20%] border-b lg:border-b-0 lg:border-r-2 border-[#25204b] pb-4 lg:pb-0">
+              <h1 className="font-black text-base sm:text-xl text-[#25204b] border-b-2 border-[#25204b] pb-1 w-fit">Dashboard</h1>
               <ul className="mt-6 text-white text-sm sm:text-base flex justify-center sm:justify-start sm:flex-col gap-4">
-                  <li className="font-black text-black"><NavLink to={'/Admin'}>States</NavLink></li>
+                  <li className="font-black text-[#25204b]"><NavLink to={'/Admin'}>States</NavLink></li>
                   <li className="font-black "><NavLink to={'/Admin/users'}>Users</NavLink></li>
                   <li className=" font-black"><NavLink to={'/Admin/registers'}>Registers</NavLink></li>
               </ul>
@@ -42,13 +42,13 @@ const Dashboard = () => {
 
           {/* Main Content */}
           <div className="flex-1 overflow-x-auto">
-              <h1 className="text-black font-black mb-4 text-base sm:text-xl text-left ">Admin</h1>
+              <h1 className="text-[#25204b] font-black mb-4 text-base sm:text-xl text-left ">Admin</h1>
 
               <div className="grid sm:grid-cols-2 gap-3 mt-6">
             {Value.map((item, index) => (
               <div
                 key={index}
-                className="   flex flex-col bg-orange-600/30 backdrop-blur-lg rounded-xl p-3 sm:p-6 justify-center items-center cursor-pointer "
+                className="   flex flex-col bg-purple-400/10 backdrop-blur-lg rounded-xl p-3 sm:p-6 justify-center items-center cursor-pointer "
               >
                 <img
                   src={item.icon}

@@ -47,9 +47,9 @@ const [error,setError]=useState('')
         <img
           src={preview?preview:user?.profileImage?.url}
           alt="Profile"
-          className="w-28 h-28 rounded-full object-cover border-4 border-orange-400"
+          className="w-28 h-28 rounded-full object-cover border-4 border-purple-400"
         />
-        <label htmlFor="profileImage" className="absolute bottom-1 right-0 bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-orange-600 transition">
+        <label htmlFor="profileImage" className="absolute bottom-1 right-0 bg-purple-400 text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-purple-500 transition">
           <span className="text-xl">+</span>
           <input
             id="profileImage"
@@ -64,7 +64,7 @@ const [error,setError]=useState('')
         <button
           type="submit"
           disabled={loading || !image}
-          className="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition disabled:opacity-50"
+          className="bg-purple-400 text-white px-4 py-2 rounded-lg hover:bg-purple-500 transition disabled:opacity-50"
         >
           Update Picture
         </button>

@@ -24,7 +24,7 @@ const HandleSubmit=(e)=>{
   return (
     <section className="relative  flex lg:flex-row flex-col max-w-3xl mx-auto sm:p-16 pb-6 !pt-[126px] px-8 min-h-[calc(100vh-80px)]">
          
-          <div className="flex-1 min-w-[20%] flex bg-orange-600/20 backdrop-blur-lg border border-green-200/20 rounded-xl p-6 max-w-md mx-auto  shadow-2xl flex-col">
+          <div className="flex-1 min-w-[20%] flex bg-purple-600/20 backdrop-blur-lg  rounded-xl p-6 max-w-md mx-auto  shadow-2xl flex-col">
             <h1 className="sm:text-5xl text-3xl  font-semibold sm:leading-snug font-poppins">
               Sign In
             </h1>
@@ -40,7 +40,7 @@ const HandleSubmit=(e)=>{
                 <input
                   type="email"
                   name="email"
-                  className="bg-[#ffefb7]  outline-orange-600  text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
+                  className="bg-purple-100 outline-purple-400   text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
                   placeholder="anything@gmail.com"
                   required
                   value={email}
@@ -53,7 +53,7 @@ const HandleSubmit=(e)=>{
                 <input
                   type="password"
                   name="Password"
-                  className="bg-[#ffefb7]  outline-orange-600  text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
+                  className="bg-purple-100 outline-purple-400   text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
                   placeholder="Password"
                   required
                   value={password}
@@ -64,7 +64,7 @@ const HandleSubmit=(e)=>{
               <button
                 type="submit"
                 disabled={loading}
-                className={` cursor-pointer  ${loading?'bg-gray-800':'bg-gradient-to-br from-orange-400 to-orange-600  '}  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+                className={` cursor-pointer  ${loading?'bg-gray-800':'bg-gradient-to-br from-purple-400 to-purple-500  '} text-white font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
               >
                 {loading ? "Sending..." : "Sign In"}
               </button>

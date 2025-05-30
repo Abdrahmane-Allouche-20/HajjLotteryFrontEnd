@@ -1,10 +1,13 @@
 body{
 background: radial-gradient(
-  ellipse 100% 10% at 50% 0%,
-  #ffb97c,
-  #FFE99A
+  ellipse at center,
+  #dad2ff 0%,
+  #d6cfff 40%,
+  #d6cfff 80%
   
 );
+
+
  min-height: 100vh;
 height: 100%;
 }

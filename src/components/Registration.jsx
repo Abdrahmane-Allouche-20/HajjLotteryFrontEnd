@@ -26,8 +26,8 @@ function Registration() {
 }, [user]); // ✅ Correct dependency
 
   return (
-     <div className="flex-1 min-w-[50%] flex bg-orange-600/20 backdrop-blur-lg  rounded-xl p-6  mx-auto  shadow-2xl flex-col">
-        <h1 className="sm:text-3xl text-xl font-semibold sm:leading-snug font-poppins">
+     <div className="flex-1 min-w-[50%] flex bg-purple-600/20 backdrop-blur-lg  rounded-xl p-6  mx-auto  shadow-2xl flex-col">
+        <h1 className="sm:text-3xl text-xl text-[#25204b] font-semibold sm:leading-snug font-poppins">
           Hajj Registration
         </h1>
 
@@ -39,7 +39,7 @@ function Registration() {
             <input
               type="text"
               name="firstName"
-              className="bg-[#ffefb7]  outline-orange-400  text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+              className="bg-purple-100 outline-purple-400   text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
               placeholder="First Name"
               required
               value={firstname}
@@ -52,7 +52,7 @@ function Registration() {
             <input
               type="text"
               name="lastName"
-              className="bg-[#ffefb7] outline-orange-400  text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+              className="bg-purple-100 outline-purple-400   text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
               placeholder="Last Name"
               required
               value={lastname}
@@ -64,7 +64,7 @@ function Registration() {
             <input
               type="text"
               name="email"
-              className="bg-[#ffefb7]/50 outline-orange-400 cursor-not-allowed  text-gray-900/45 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+              className="bg-purple-100/50 outline-purple-400 cursor-not-allowed  text-gray-900/45 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
               placeholder="Nationality"
               disabled
               value={user?.email||""}
@@ -75,7 +75,7 @@ function Registration() {
             <input
               type="tel"
               name="phone"
-              className="bg-[#ffefb7]  outline-orange-400  text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+              className="bg-purple-100 outline-purple-400   text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
               placeholder="0777777777"
               required
               value={phone}
@@ -87,7 +87,7 @@ function Registration() {
             <input
               type="date"
               name="Birth Date"
-              className="bg-[#ffefb7] outline-orange-400  text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+              className="bg-purple-100 outline-purple-400   text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
               placeholder="Last Name"
               required
               value={birthdate}
@@ -100,7 +100,7 @@ function Registration() {
               name="gender"
               value={gender} // Bind the value to the gender state
               onChange={(e) => setGender(e.target.value)} // Update the gender state when selection changes
-              className="mt-2 block sm:text-base text-sm w-full px-4 py-2 bg-[#ffefb7]  rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
+              className="mt-2 block sm:text-base text-sm w-full px-4 py-2 bg-purple-100  rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 "
             >
               <option value="" disabled>Select Gender</option>  {/* Placeholder option */}
               <option value="male">Men</option>
@@ -111,7 +111,7 @@ function Registration() {
           Nationality
         <select
     name="nationality"
-    className="bg-[#ffefb7] outline-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+    className="bg-purple-100 outline-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500  text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
     required
     value={nationality}
     onChange={(e) => setNationality(e.target.value)}
@@ -268,7 +268,7 @@ function Registration() {
             <input
               type="text"
               name="passport"
-              className="bg-[#ffefb7]  outline-orange-400  text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
+              className="bg-purple-100 outline-purple-400   text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal"
               placeholder="Passport Number"
               required
               value={passport}
@@ -280,7 +280,7 @@ function Registration() {
           <button
             type="submit"
             disabled={loading}
-            className={`cursor-pointer bg-gradient-to-br ${loading?'bg-gray-800':'bg-gradient-to-br from-orange-400 to-orange-600 text-white '}  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+            className={`cursor-pointer bg-gradient-to-br ${loading?'bg-gray-800':'bg-gradient-to-br from-purple-400 to-purple-500  '}  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
           >
             {loading ? 'Sending...' : 'Sign Up'}
           </button>

@@ -70,7 +70,7 @@ const Contact = () => {
   return (
     <section className="relative  flex lg:flex-row flex-col max-w-5xl mx-auto sm:p-16 pb-6 !pt-[126px] px-8 min-h-[calc(100vh-80px)]">
       {alert.show && <Alert {...alert} />}
-      <div className="flex-1 min-w-[50%] flex p-6 rounded-xl bg-orange-600/20 backdrop-blur-md shadow-lg flex-col">
+      <div className="flex-1 min-w-[50%] flex p-6 rounded-xl bg-purple-600/20 backdrop-blur-md shadow-lg flex-col">
         <h1 className="sm:text-5xl text-3xl  font-semibold text- sm:leading-snug font-poppins">
           Get in Touch
         </h1>
@@ -85,7 +85,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              className="bg-[#ffefb7] outline-orange-400   text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
+              className="bg-purple-100 outline-purple-400    text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
               placeholder="Name"
               required
               value={form.name}
@@ -99,7 +99,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              className="bg-[#ffefb7]  outline-orange-400  text-gray-900 text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
+              className="bg-purple-100  outline-purple-400   text-sm rounded-lg  block w-full p-2.5 mt-2.5 font-normal "
               placeholder="anything@gmail.com"
               required
               value={form.email}
@@ -113,7 +113,7 @@ const Contact = () => {
             <textarea
               name="message"
               rows="4"
-              className="block p-2.5 w-full outline-orange-400 text-sm text-gray-900 bg-[#ffefb7] rounded-lg  mt-2.5 font-normal "
+              className="block p-2.5 w-full bg-purple-100  outline-purple-400 text-sm  rounded-lg  mt-2.5 font-normal "
               placeholder="Write your thoughts here..."
               value={form.message}
               onChange={handleChange}
@@ -124,7 +124,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="text- bg-gradient-to-br from-orange-400 to-orange-600 text-white cursor-pointer    font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="text- bg-gradient-to-br  from-purple-400 to-purple-500  cursor-pointer    font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {loading ? "Sending..." : "Submit"}
           </button>

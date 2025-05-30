@@ -22,7 +22,7 @@ function Header() {
             user?.profileImage?.url
           }
           alt="Profile"
-          className="w-9 h-9 rounded-full object-cover border-2 border-white"
+          className="w-9 h-9 rounded-full object-cover border-2 border-[#8278d0]"
         />
         
         
@@ -40,7 +40,7 @@ function Header() {
             to="/About"
 
             className={({ isActive }) =>
-              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-[#25204b]  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
     transform duration-300  flex items-center gap-3 `
             }
           >
@@ -51,7 +51,7 @@ function Header() {
             onClick={() => setIsOpen(false)}
             to='/Contact'
             className={({ isActive }) =>
-              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"}
+              `${isActive ? "text-[#25204b]  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"}
   transform duration-300  flex items-center gap-3`
             }>
 
@@ -62,7 +62,7 @@ function Header() {
             to="/hejj_registration"
 
             className={({ isActive }) =>
-              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-[#25204b]  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
   transform duration-300  flex items-center gap-3 `
             }
           >
@@ -77,7 +77,7 @@ function Header() {
               to="/Admin"
 
               className={({ isActive }) =>
-                `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+                `${isActive ? "text-[#25204b]  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
         transform duration-300  flex items-center gap-3 `
               }
             >
@@ -94,7 +94,7 @@ function Header() {
             to="/About"
 
             className={({ isActive }) =>
-              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-[#25204b]  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
     transform duration-300  flex items-center gap-3 `
             }
           >
@@ -106,7 +106,7 @@ function Header() {
             to="/Login"
 
             className={({ isActive }) =>
-              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-[#25204b]  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
         transform duration-300  flex items-center gap-3 `
             }
           >
@@ -118,7 +118,7 @@ function Header() {
             to="/Register"
 
             className={({ isActive }) =>
-              `${isActive ? "text-black  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
+              `${isActive ? "text-[#25204b]  translate-x-3 md:translate-x-0 md:-translate-y-2" : "text-white  md:hover:-translate-x-0 hover:translate-x-3 md:hover:-translate-y-1"} 
       transform duration-300  flex items-center gap-3 `
             }
           >
